@@ -130,7 +130,7 @@ export const StepContent = (props: StepContentProps) => {
         );
       case 11:
         return getQuestion(
-          "Delantero indispensable para luchar un campeonato de Comunio"
+          "Jugador profesional que se dedica a trolear a empleados de G+D"
         );
       case 12:
         return getQuestion(

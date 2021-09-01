@@ -17,7 +17,7 @@ export const getCorrectAnswer = (step: number, answer: string) => {
     case 10:
       return answer === "con calma" ? correctAnswerResponse("0x0056") : badAnswerResponse;
     case 11:
-      return answer === "maxi gomez" || answer === "maxi gómez" ? correctAnswerResponse("0x0056") : badAnswerResponse;
+      return answer === "timo werner" ? correctAnswerResponse("0x0056") : badAnswerResponse;
     case 12:
       return answer === "tortugas" || answer === "tortuga"? correctAnswerResponse("0x0056") : badAnswerResponse;
     case 13:
