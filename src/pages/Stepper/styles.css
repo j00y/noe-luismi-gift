@@ -1,0 +1,19 @@
+.header {
+    background-color: #78c7a4;
+    color: white;
+    width: 100%;
+    padding: 20px;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 20px;
+    font-size: 12px;
+    text-align: center;
+    font-family: 'Roboto';
+    box-sizing: border-box;
+}

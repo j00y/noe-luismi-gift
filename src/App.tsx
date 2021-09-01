@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import "./App.css";
+import { StepperPage } from "./pages/Stepper/StepperPage";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { WelcomePage } from "./pages/Welcome/WelcomePage";
+import { getCookie, setCookie } from "./utils";
+import { TimeoutPage } from "./pages/Timeout/TimeoutPage";
+import { ResetPage } from "./pages/Reset/ResetPage";
 
 function App() {
+  useEffect(() => {
+    let timer = getCookie("timer");
+
+    if (!!timer) {
+      setInterval(() => {
+        timer = getCookie("timer");
+        if (timer !== "0") {
+          setCookie("timer", JSON.stringify(parseInt(timer || "0") - 1));
+        }
+      }, 1000);
+    }
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/instructions" component={StepperPage} />
+        <Route path="/timeout"component={TimeoutPage} />
+        <Route path="/reset"component={ResetPage} />
+        <Route component={WelcomePage} />
+      </Switch>
+    </Router>
   );
 }
 
