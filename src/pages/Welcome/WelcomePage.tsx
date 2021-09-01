@@ -9,6 +9,7 @@ export const WelcomePage = () => {
 
   return (
     <>
+    <Box display='flex' justifyContent='center' width='100%'>
       <Box
         height="80vh"
         width="100%"
@@ -17,6 +18,7 @@ export const WelcomePage = () => {
         padding="20px"
         boxSizing="border-box"
         justifyContent="center"
+        maxWidth='500px'
       >
         <Box marginBottom="20px">
           <img src={logo} className='logo'/>
@@ -31,6 +33,7 @@ export const WelcomePage = () => {
         <Button variant="contained" color="primary" onClick={()=>{history.push('/instructions')}}>
           Vamos allá!
         </Button>
+      </Box>
       </Box>
     </>
   );

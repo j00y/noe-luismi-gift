@@ -41,10 +41,9 @@ export const StepperPage = () => {
     }
   }, []);
   const handleNext = () => {
-    
     let timer = getCookie("timer");
-    if(timer === '0'){
-      history.push('/timeout')
+    if (timer === "0") {
+      history.push("/timeout");
     }
     if (activeStep === 5 && !timer) {
       setCookie("timer", "4800");
@@ -64,31 +63,41 @@ export const StepperPage = () => {
 
   return (
     <>
-      <div className="header">Instrucciones</div>
-      <Stepper activeStep={activeStep} orientation="vertical">
-        {steps.map((label) => (
-          <Step key={label}>
-            <StepLabel>{label}</StepLabel>
-            <StepContent>
-              <StepContentInfo step={activeStep} />
-              <div>
-                <Box display="flex" justifyContent="flex-end">
-                  <Button disabled={activeStep === 0} onClick={handleBack}>
-                    Back
-                  </Button>
-                  <Button
-                    disabled={activeStep === steps.length - 1}
-                    color="primary"
-                    onClick={handleNext}
-                  >
-                    {activeStep === 5 ? "Empezar" : "Next"}
-                  </Button>
-                </Box>
-              </div>
-            </StepContent>
-          </Step>
-        ))}
-      </Stepper>
+      <div className="header">
+        <Box display="flex" justifyContent="center" width="100%">
+          <Box maxWidth="700px" width="100%">
+            Instrucciones
+          </Box>
+        </Box>
+      </div>
+      <Box display="flex" justifyContent="center" width="100%">
+        <Box maxWidth="700px" width="100%">
+          <Stepper activeStep={activeStep} orientation="vertical">
+            {steps.map((label) => (
+              <Step key={label}>
+                <StepLabel>{label}</StepLabel>
+                <StepContent>
+                  <StepContentInfo step={activeStep} />
+                  <div>
+                    <Box display="flex" justifyContent="flex-end">
+                      <Button disabled={activeStep === 0} onClick={handleBack}>
+                        Back
+                      </Button>
+                      <Button
+                        disabled={activeStep === steps.length - 1}
+                        color="primary"
+                        onClick={handleNext}
+                      >
+                        {activeStep === 5 ? "Empezar" : "Next"}
+                      </Button>
+                    </Box>
+                  </div>
+                </StepContent>
+              </Step>
+            ))}
+          </Stepper>
+        </Box>
+      </Box>
       <div className="footer">Made with ♥ by your friends</div>
     </>
   );

@@ -57,71 +57,76 @@ export const StepContent = (props: StepContentProps) => {
     switch (step) {
       case 0:
         return typographycInfo(
-          `A continuación podreis encontrar las reglas del juego`
+          `A continuación podréis encontrar las reglas del juego`
         );
       case 1:
         return (
           <>
             {typographycInfo(
-              `Tendreis 2 horas para completar el desafio y así obtener vuestro premio.`
+              `Tendréis 2 horas para completar el desafío y así obtener vuestro premio.`
             )}
             {typographycInfo(
-              `Si os excedeis del tiempo debereis suplicar una prorroga.`
+              `Si os excedéis del tiempo deberéis suplicar una prórroga.`
             )}
             {typographycInfo(
-              `Nosotros creemos que sois capaces, esperemos que no os retrateis.`
+              `Nosotros creemos que sois capaces, esperemos que no os retratéis.`
             )}
           </>
         );
       case 2:
         return (
           <>
-            {typographycInfo(`Como podeis ver, teneis:`)}
+            {typographycInfo(`Como podéis ver, tenéis:`)}
             <Box display="flex" alignItems="center">
               <CreditCardIcon fontSize="small" />
-
-              {typographycInfo(`Tarjetas (10)`)}
+              <div className="item">{typographycInfo(`x 10`)}</div>
             </Box>
             <Box display="flex" alignItems="center">
               <LockIcon fontSize="small" />
-
-              {typographycInfo(`Caja fuerte (1)`)}
+              <div className="item">{typographycInfo(` x 1`)}</div>
             </Box>
             <Box display="flex" alignItems="center">
               <DescriptionIcon fontSize="small" />
+              <div className="item">{typographycInfo(` x 1`)}</div>
               <a href="google.com" className="spec-link">
-                Specification
+                Download specification
               </a>
-              <div>(1)</div>
             </Box>
           </>
         );
 
       case 3:
         return typographycInfo(
-          `Utilizando dichos objetos, debeis ser capaces de encontrar las 8 cifras en su correcto orden para poder conseguir la recompensa`
+          `Utilizando dichos objetos, debéis ser capaces de encontrar las 8 cifras en su correcto orden para poder conseguir la recompensa`
         );
       case 4:
-        return typographycInfo(
-          `Habeis probado a leer alguna de las tarjetas? Cuanta basura no? A continuación tendreis unas preguntas. Si respondeis correctamente os diremos en que posición de memoria debeis apuntar`
+        return (
+          <>
+            {typographycInfo(`¿Habeis probado a leer alguna de las tarjetas?`)}
+            {typographycInfo(`¿Cuanta basura no?`)}
+            {typographycInfo(
+              `A continuación tendréis unas preguntas. Si respondéis correctamente os diremos en que posición de memoria debéis apuntar`
+            )}
+          </>
         );
+
       case 5:
         return typographycInfo(
           `A partir de este punto se activará el temporizador`
         );
       case 6:
-        return getQuestion("En qué año se fundó G+D?");
+        return getQuestion("¿En qué año se fundó G+D?");
       case 7:
-        return getQuestion("Cuantas plazas tiene el coche que quiere Luismi?");
+        return getQuestion("¿Cuantas plazas tiene el coche que quiere Luismi?");
       case 8:
         return getQuestion(
-          "Quien fué el portero obsesionado con el Quidditch de Gryffindor entre el 1987 y 1994?"
+          "¿Quien fué el portero obsesionado con el Quidditch de Gryffindor entre el 1987 y 1994?"
         );
       case 9:
-        return getQuestion("Quien ha diseñado esta web?");
+        return getQuestion("¿Quien ha diseñado esta web?");
       case 10:
         return getQuestion(
-          "Cuál es el video de youtube más visto en el año de vuestra pedida?"
+          "¿Cuál es el video de youtube más visto en el año de vuestra pedida?"
         );
       case 11:
         return getQuestion(
@@ -129,14 +134,14 @@ export const StepContent = (props: StepContentProps) => {
         );
       case 12:
         return getQuestion(
-          "A qué animales grabaron para simular el rugido de los raptores en Jurassic Park?"
+          "¿A qué animales grabaron para simular el rugido de los raptores en Jurassic Park?"
         );
       case 13:
         return getQuestion(
-          "Cuál es la película que estábais viendo cuando os disteis el primer beso?"
+          "¿Cuál es la película que estábais viendo cuando os disteis el primer beso?"
         );
       case 14:
-        return getQuestion("Con qué 4 carácteres diríais que todo va bien?");
+        return getQuestion("¿Con qué 4 carácteres diríais que todo va bien?");
       default:
         return typographycInfo("Unknown step");
     }
