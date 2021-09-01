@@ -8,6 +8,9 @@ import {
 import { useState } from "react";
 import { StepContentProps } from "./StepContentProps";
 import { getCorrectAnswer } from "../../utils";
+import CreditCardIcon from "@material-ui/icons/CreditCard";
+import LockIcon from "@material-ui/icons/Lock";
+import DescriptionIcon from "@material-ui/icons/Description";
 
 export const StepContent = (props: StepContentProps) => {
   const typographycInfo = (data: string) => <Typography>{data}</Typography>;
@@ -57,13 +60,43 @@ export const StepContent = (props: StepContentProps) => {
           `A continuación podreis encontrar las reglas del juego`
         );
       case 1:
-        return typographycInfo(
-          `Tendreis 2 horas para completar el desafio y así obtener vuestro premio. Si os excedeis del tiempo debereis suplicar una prorroga. Nosotros creemos que sois capaces, esperemos que no os retrateis.`
+        return (
+          <>
+            {typographycInfo(
+              `Tendreis 2 horas para completar el desafio y así obtener vuestro premio.`
+            )}
+            {typographycInfo(
+              `Si os excedeis del tiempo debereis suplicar una prorroga.`
+            )}
+            {typographycInfo(
+              `Nosotros creemos que sois capaces, esperemos que no os retrateis.`
+            )}
+          </>
         );
       case 2:
-        return typographycInfo(
-          "Como podeis ver, teneis diez tarjetas, una <>spec<> y una caja fuerte."
+        return (
+          <>
+            {typographycInfo(`Como podeis ver, teneis:`)}
+            <Box display="flex" alignItems="center">
+              <CreditCardIcon fontSize="small" />
+
+              {typographycInfo(`Tarjetas (10)`)}
+            </Box>
+            <Box display="flex" alignItems="center">
+              <LockIcon fontSize="small" />
+
+              {typographycInfo(`Caja fuerte (1)`)}
+            </Box>
+            <Box display="flex" alignItems="center">
+              <DescriptionIcon fontSize="small" />
+              <a href="google.com" className="spec-link">
+                Specification
+              </a>
+              <div>(1)</div>
+            </Box>
+          </>
         );
+
       case 3:
         return typographycInfo(
           `Utilizando dichos objetos, debeis ser capaces de encontrar las 8 cifras en su correcto orden para poder conseguir la recompensa`
@@ -81,17 +114,27 @@ export const StepContent = (props: StepContentProps) => {
       case 7:
         return getQuestion("Cuantas plazas tiene el coche que quiere Luismi?");
       case 8:
-        return getQuestion("Quien fué el portero obsesionado con el Quidditch de Gryffindor entre el 1987 y 1994?");
+        return getQuestion(
+          "Quien fué el portero obsesionado con el Quidditch de Gryffindor entre el 1987 y 1994?"
+        );
       case 9:
         return getQuestion("Quien ha diseñado esta web?");
       case 10:
-        return getQuestion("Cuál es el video de youtube más visto en el año de vuestra pedida?");
+        return getQuestion(
+          "Cuál es el video de youtube más visto en el año de vuestra pedida?"
+        );
       case 11:
-        return getQuestion("Delantero indispensable para luchar un campeonato de Comunio");
+        return getQuestion(
+          "Delantero indispensable para luchar un campeonato de Comunio"
+        );
       case 12:
-        return getQuestion("A qué animales grabaron para simular el rugido de los raptores en Jurassic Park?");
+        return getQuestion(
+          "A qué animales grabaron para simular el rugido de los raptores en Jurassic Park?"
+        );
       case 13:
-        return getQuestion("Cuál es la película que estábais viendo cuando os disteis el primer beso?");
+        return getQuestion(
+          "Cuál es la película que estábais viendo cuando os disteis el primer beso?"
+        );
       case 14:
         return getQuestion("Con qué 4 carácteres diríais que todo va bien?");
       default:
