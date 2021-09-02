@@ -88,7 +88,12 @@ export const StepContent = (props: StepContentProps) => {
             <Box display="flex" alignItems="center">
               <DescriptionIcon fontSize="small" />
               <div className="item">{typographycInfo(` x 1`)}</div>
-              <a href="google.com" className="spec-link">
+              <a
+                href="https://drive.google.com/file/d/1Ud9sF3-zIsrU6VpCeNQDGBsTwgl2IgHN/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="spec-link"
+              >
                 Download specification
               </a>
             </Box>
