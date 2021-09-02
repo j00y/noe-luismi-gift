@@ -1,12 +1,15 @@
 .header {
     background-color: #78c7a4;
     color: white;
-    width: 100%;
+    width: 100vw;
     padding: 20px;
     font-weight: 600;
     box-sizing: border-box;
-    min-height: 70px;
+    height: 70px;
     display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 1;
 }
 
 .footer {

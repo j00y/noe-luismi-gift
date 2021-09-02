@@ -109,7 +109,7 @@ export const StepperPage = () => {
             alignItems="center"
             justifyContent="space-between"
           >
-            <div>Instrucciones</div>
+            <div>Juego</div>
             <Box color="black" fontSize="12px">
               <Box fontWeight="300">
                 {!!getCookie("limit") && "Limit time:"}
@@ -119,7 +119,7 @@ export const StepperPage = () => {
           </Box>
         </Box>
       </div>
-      <Box display="flex" justifyContent="center" width="100%">
+      <Box display="flex" justifyContent="center" width="100%" marginTop='70px'>
         <Box maxWidth="700px" width="100%">
           <Stepper activeStep={activeStep} orientation="vertical">
             {steps.map((label) => (
