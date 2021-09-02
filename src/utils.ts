@@ -29,6 +29,13 @@ export const getCorrectAnswer = (step: number, answer: string) => {
   }
 };
 
+
+export function addHoursToDate(date: Date, hours: number): Date {
+  return new Date(new Date(date).setHours(date.getHours() + hours));
+}
+export const CORRECT_COMBINATION = '12345678';
+export const LIMIT_HOURS = 1;
+export const LIMIT_MILISECONDS = LIMIT_HOURS * 3600000;
 export function getCookie(name: string) : string | null{
   return localStorage.getItem(name);
 }

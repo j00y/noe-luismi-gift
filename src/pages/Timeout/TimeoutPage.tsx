@@ -6,7 +6,7 @@ export const TimeoutPage = () => {
   return (
     <>
       <Box
-        height="80vh"
+        height="calc(100vh - 58px);"
         width="100%"
         display="flex"
         flexDirection="column"
@@ -23,14 +23,16 @@ export const TimeoutPage = () => {
         <Box marginBottom="20px" width="100%">
           <Button
             variant="text"
+            color='primary'
             onClick={() => {
-              window.open("mailto:test@example.com");
+              window.open("https://chat.whatsapp.com/JmQsZIFG2LC84QPFCDO6Df");
             }}
           >
-            Contacta para suplicar más tiempo
+            Clica para suplicar más tiempo
           </Button>
         </Box>
       </Box>
+      <div className="footer">Made with ♥ by your friends</div>
     </>
   );
 };

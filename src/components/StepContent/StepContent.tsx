@@ -63,7 +63,7 @@ export const StepContent = (props: StepContentProps) => {
         return (
           <>
             {typographycInfo(
-              `Tendréis 2 horas para completar el desafío y así obtener vuestro premio.`
+              `Tendréis 1 hora para completar el desafío y así obtener vuestro premio.`
             )}
             {typographycInfo(
               `Si os excedéis del tiempo deberéis suplicar una prórroga.`

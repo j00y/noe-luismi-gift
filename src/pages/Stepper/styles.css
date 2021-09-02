@@ -5,6 +5,8 @@
     padding: 20px;
     font-weight: 600;
     box-sizing: border-box;
+    min-height: 70px;
+    display: flex;
 }
 
 .footer {
