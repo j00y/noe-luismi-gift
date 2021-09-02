@@ -20,7 +20,7 @@ import { useHistory } from "react-router-dom";
 const getStep = () => {
   return [
     "Empezamos",
-    "Timming",
+    "Timing",
     "Material",
     "Objetivo",
     "Información",
