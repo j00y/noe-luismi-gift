@@ -8,10 +8,10 @@ import { StepContent as StepContentInfo } from "../../components/StepContent/Ste
 import { Box, TextField, Typography, useTheme } from "@material-ui/core";
 import "./styles.css";
 import {
-  addHoursToDate,
+  addMinutesToDate,
   CORRECT_COMBINATION,
   getCookie,
-  LIMIT_HOURS,
+  LIMIT_MINUTES,
   LIMIT_MILISECONDS,
   setCookie,
 } from "../../utils";
@@ -87,7 +87,7 @@ export const StepperPage = () => {
       }
     }
     if (activeStep === 5 && !timer) {
-      let limitTime = addHoursToDate(new Date(), LIMIT_HOURS);
+      let limitTime = addMinutesToDate(new Date(), LIMIT_MINUTES);
       setCookie("limit", limitTime);
       setCookie("timer", new Date().getTime());
     }
