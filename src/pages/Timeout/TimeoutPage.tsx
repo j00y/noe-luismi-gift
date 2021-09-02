@@ -25,7 +25,7 @@ export const TimeoutPage = () => {
             variant="text"
             color='primary'
             onClick={() => {
-              window.open("https://chat.whatsapp.com/JmQsZIFG2LC84QPFCDO6Df");
+              window.open("https://wa.me/34669510810");
             }}
           >
             Clica para suplicar más tiempo
