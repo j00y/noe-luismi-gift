@@ -72,7 +72,7 @@ export const StepperPage = () => {
     }
     setAnswer(
       value === CORRECT_COMBINATION
-        ? { valid: true, message: "Correcto!" }
+        ? { valid: true, message: "Por fin! Ya lo tenéis" }
         : { valid: false, message: "Incorrecto. Prueba otra vez" }
     );
   };
@@ -179,7 +179,7 @@ export const StepperPage = () => {
                   }}
                   color="primary"
                 >
-                  Cuéntanoslo
+                  Contádnoslo
                 </Button>
               )}
             </Box>
