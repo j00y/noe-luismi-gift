@@ -79,7 +79,7 @@ export const StepContent = (props: StepContentProps) => {
             {typographycInfo(`Como podéis ver, tenéis:`)}
             <Box display="flex" alignItems="center">
               <CreditCardIcon fontSize="small" />
-              <div className="item">{typographycInfo(`x 10`)}</div>
+              <div className="item">{typographycInfo(`x 8`)}</div>
             </Box>
             <Box display="flex" alignItems="center">
               <LockIcon fontSize="small" />
