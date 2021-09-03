@@ -89,7 +89,7 @@ export const StepContent = (props: StepContentProps) => {
               <DescriptionIcon fontSize="small" />
               <div className="item">{typographycInfo(` x 1`)}</div>
               <a
-                href="https://drive.google.com/file/d/1Ud9sF3-zIsrU6VpCeNQDGBsTwgl2IgHN/view?usp=sharing"
+                href="https://drive.google.com/file/d/1sv1p1V0ATMWJxnA7FPtswR0PPc22PGIo/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="spec-link"
